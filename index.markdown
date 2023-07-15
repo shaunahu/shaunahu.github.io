@@ -1,8 +1,3 @@
----
-layout: default
-title: CV
----
-
 # Yuxuan Shauna Hu
 
 Email: shaunahu94@outlook.com 

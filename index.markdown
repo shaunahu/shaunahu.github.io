@@ -3,9 +3,9 @@ layout: default
 title: CV
 ---
 
-# Yuxuan Hu
+# Yuxuan Shauna Hu
 
-Email: Yuxuan.hu@utas.edu.au  
+Email: shaunahu94@outlook.com 
 
 ## Education
 
@@ -57,4 +57,3 @@ Oral Presentation and Poster, "AI Facilitated Isolations? The Impact of Recommen
 - The 16th Pacific Rim International Conference on Artificial Intelligence (PRICAI), August 2019
 - The 21st International Conference on Principles and Practice of Multi-Agent Systems (PRIMA), November 2018
 
-###

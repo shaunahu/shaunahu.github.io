@@ -157,3 +157,83 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+// ── Network graph background ──────────────────────────────────────────────────
+(function () {
+  const canvas = document.getElementById('network-bg');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const NODE_COUNT = 65;
+  const MAX_DIST   = 140;
+  const NODE_R     = 1.8;
+  const SPEED      = 0.35;
+  const NODE_COLOR = 'hsla(217, 78%, 73%, 0.55)';
+  const LINE_BASE  = 0.20;
+
+  let nodes = [];
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function initNodes() {
+    nodes = [];
+    for (let i = 0; i < NODE_COUNT; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      nodes.push({
+        x:  Math.random() * canvas.width,
+        y:  Math.random() * canvas.height,
+        vx: Math.cos(angle) * SPEED * (0.4 + Math.random() * 0.6),
+        vy: Math.sin(angle) * SPEED * (0.4 + Math.random() * 0.6),
+      });
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (const n of nodes) {
+      n.x += n.vx;
+      n.y += n.vy;
+      if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
+      if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+    }
+
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx   = nodes[i].x - nodes[j].x;
+        const dy   = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MAX_DIST) {
+          const alpha = (1 - dist / MAX_DIST) * LINE_BASE;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `hsla(217, 78%, 63%, ${alpha})`;
+          ctx.lineWidth   = 1;
+          ctx.stroke();
+        }
+      }
+    }
+
+    for (const n of nodes) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, NODE_R, 0, Math.PI * 2);
+      ctx.fillStyle = NODE_COLOR;
+      ctx.fill();
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  resize();
+  initNodes();
+  animate();
+
+  window.addEventListener('resize', () => { resize(); initNodes(); });
+}());
+

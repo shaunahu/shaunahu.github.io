@@ -27,6 +27,8 @@
 
 <body>
 
+  <canvas id="network-bg" aria-hidden="true"></canvas>
+
   <!--
     - #MAIN
   -->
@@ -48,9 +50,11 @@
         <div class="info-content">
           <h1 class="name" title="Yuxuan Hu">Yuxuan (Shauna) Hu</h1>
 
-          <p class="title">Ph.D. in Computer Science | </p>
-          <p class="title">Data Engineer | </p>
-          <p class="title">AI Researcher</p>
+          <div class="title-tags">
+            <p class="title">Ph.D. in Computer Science</p>
+            <p class="title">Data Engineer</p>
+            <p class="title">AI Researcher</p>
+          </div>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -391,22 +395,67 @@
           <h2 class="h2 article-title">Publications</h2>
         </header>
 
+        <section class="research-focus">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="telescope-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Research Focus</h3>
+          </div>
+
+          <div class="research-grid">
+
+            <div class="research-card">
+              <div class="research-card-icon">
+                <ion-icon name="share-social-outline"></ion-icon>
+              </div>
+              <h4 class="research-card-title">Social Networks</h4>
+              <p class="research-card-text">Modelling influence diffusion and network dynamics in online social networks.</p>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card-icon">
+                <ion-icon name="git-network-outline"></ion-icon>
+              </div>
+              <h4 class="research-card-title">Agent-Based Modelling</h4>
+              <p class="research-card-text">Simulating through autonomous agents to study emergent collective behaviour in complex systems.</p>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card-icon">
+                <ion-icon name="hardware-chip-outline"></ion-icon>
+              </div>
+              <h4 class="research-card-title">Multi-Agent Systems</h4>
+              <p class="research-card-text">Designing autonomous agents that cooperate, compete, and communicate in dynamic environment.</p>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card-icon">
+                <ion-icon name="filter-outline"></ion-icon>
+              </div>
+              <h4 class="research-card-title">Recommendation Systems</h4>
+              <p class="research-card-text">Building responsible recommenders that balance personalisation with societal fairness and diversity.</p>
+            </div>
+
+          </div>
+        </section>
+
         <section class="experience">
 		
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="documents-outline"></ion-icon>
+              <ion-icon name="document-text-outline"></ion-icon>
             </div>
 
             <h3 class="h3">Refereed Journal Papers</h3>
           </div>
 
           <ol class="experience-list">
-	    <li class="experience-item">
+            <li class="experience-item">
               <p class="experience-text">
                 Mengyan Wang, <b>Yuxuan Hu</b>, Shiqing Wu, Weihua Li, Quan Bai and Verica Rupar.
-                “Balancing Information Perception With Yin-Yang: Agent-Based Adaptive Information Neutrality Model for Recommendation Systems”.
+                "Balancing Information Perception With Yin-Yang: Agent-Based Adaptive Information Neutrality Model for Recommendation Systems".
                 In: <i>IEEE Transactions on Computational Social Systems.</i> 2025.
               </p>
               <div class="icon-box"><a href="https://ieeexplore.ieee.org/abstract/document/11037646">
@@ -416,7 +465,7 @@
             <li class="experience-item">
               <p class="experience-text">
                 Lan Zhang, <b>Yuxuan Hu</b>, Weihua Li, Quan Bai and Parma Nand.
-                “LLM-AIDSim: LLM-Enhanced Agent-Based Influence Diffusion Simulation in Social Networks”.
+                "LLM-AIDSim: LLM-Enhanced Agent-Based Influence Diffusion Simulation in Social Networks".
                 In: <i>Systems.</i> 2025.
               </p>
               <div class="icon-box"><a href="https://www.mdpi.com/2079-8954/13/1/29">
@@ -427,7 +476,7 @@
             <li class="experience-item">
               <p class="experience-text">
                 Mengyan Wang, <b>Yuxuan Hu</b>, Shiqing Wu, Weihua Li, Quan Bai, Zihan Yuan, and Chenting Jiang. 
-                “Nudging Towards Responsible Recommendations: A Graph-Based Approach to Mitigate Belief Filter Bubbles”. 
+                "Nudging Towards Responsible Recommendations: A Graph-Based Approach to Mitigate Belief Filter Bubbles".
                 In: <i>IEEE Transactions on Artificial Intelligence.</i> 2024.
               </p>
               <div class="icon-box"><a href="https://ieeexplore.ieee.org/abstract/document/10460339/">
@@ -438,20 +487,18 @@
             <li class="experience-item">
               <p class="experience-text">
                 Weihua Li, <b>Yuxuan Hu</b>, Chenting Jiang, Shiqing Wu, Quan Bai, and Edmund Lai. 
-                “ABEM: An Adaptive Agent-based Evolutionary Approach for Influence Maximization in Dynamic Social Networks”. 
-                In: <i>Applied Soft Computing</i>. 2023
-			        </p>
+                "ABEM: An Adaptive Agent-based Evolutionary Approach for Influence Maximization in Dynamic Social Networks".
+                In: <i>Applied Soft Computing</i>. 2023.
+              </p>
+              <div class="icon-box"><a href="https://www.sciencedirect.com/science/article/pii/S1568494623000807">
+                <span class="experience-text">PDF</span></a>
+              </div>
             </li>
-			<div class="icon-box"><a href="https://www.sciencedirect.com/science/article/pii/S1568494623000807">
-				<span class="experience-text">PDF</span></a>
-			</div>
-			  
-			</li>
 			
 			<li class="experience-item">
         <p class="experience-text">
           Weihua Li, Quan Bai, Ling Liang, Yi Yang, <b>Yuxuan Hu</b>, and Minjie Zhang. 
-          “Social Influence Minimization based on Context-aware Multiple Influences Diffusion Model”. 
+          "Social Influence Minimization based on Context-aware Multiple Influences Diffusion Model".
           In: <i>Knowledge-Based Systems</i>. 2021.
         </p>
         <div class="icon-box"><a href="https://www.sciencedirect.com/science/article/pii/S0950705121004950">
@@ -466,7 +513,7 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="documents-outline"></ion-icon>
+              <ion-icon name="document-text-outline"></ion-icon>
             </div>
 
             <h3 class="h3">Refereed Conference Papers</h3>
@@ -475,19 +522,29 @@
           <ol class="experience-list">
             <li class="experience-item">
               <p class="experience-text">
-                <b>Yuxuan Hu</b>, Gemju Sherpa, Lan Zhang, Weihua Li, Quan Bai, Yijun Wang, and Xiaodan Wang. 
-                “An LLM-enhanced Agent-based Simulation Tool for Information Propagation”. 
-                In: <i>The 33rd International Joint Conference on Artificial Intelligence (IJCAI)</i>. 2024.
+                Bhakti S Onggo, Zhou He, Peng Lu, Quan Bai, and <b>Yuxuan Hu</b>.
+                "AI-Empowered Data-Driven Agent-Based Modeling and Simulation: Challenges, Methodologies, and Future Perspectives".
+                In: <i>2025 Winter Simulation Conference (WSC)</i>. 2025.
               </p>
-              <div class="icon-box"><a href="#">
+              <div class="icon-box"><a href="https://ieeexplore.ieee.org/abstract/document/11338891">
                 <span class="experience-text">PDF</span></a>
               </div>
-			      </li>
+            </li>
+            <li class="experience-item">
+              <p class="experience-text">
+                <b>Yuxuan Hu</b>, Gemju Sherpa, Lan Zhang, Weihua Li, Quan Bai, Yijun Wang, and Xiaodan Wang. 
+                "An LLM-enhanced Agent-based Simulation Tool for Information Propagation".
+                In: <i>The 33rd International Joint Conference on Artificial Intelligence (IJCAI)</i>. 2024.
+              </p>
+              <div class="icon-box"><a href="https://www.ijcai.org/proceedings/2024/1007.pdf">
+                <span class="experience-text">PDF</span></a>
+              </div>
+            </li>
 
             <li class="experience-item">
               <p class="experience-text">
                 <b>Yuxuan Hu</b>, Shiqing Wu, Chenting Jiang, Weihua Li, Quan Bai, and Erin Roehrer. 
-                “AI Facilitated Isolations? The Impact of Recommendation-based Influence Diffusion in Human Society”. 
+                "AI Facilitated Isolations? The Impact of Recommendation-based Influence Diffusion in Human Society".
                 In: <i>The 31st International Joint Conference on Artificial Intelligence (IJCAI)</i>. 2022.
               </p>
               <div class="icon-box"><a href="https://www.ijcai.org/proceedings/2022/0705.pdf">
@@ -499,7 +556,7 @@
             <li class="experience-item">
               <p class="experience-text">
                 <b>Yuxuan Hu</b>, Quan Bai, and Weihua Li. 
-                “Context-aware Influence Diffusion in Online Social Networks”. 
+                "Context-aware Influence Diffusion in Online Social Networks".
                 In: <i>The 16th Pacific Rim Knowledge Acquisition Workshop (PKAW)</i>. 2019.
               </p>
               <div class="icon-box"><a href="https://link.springer.com/chapter/10.1007/978-3-030-30639-7_13">
@@ -515,17 +572,24 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="documents-outline"></ion-icon>
+              <ion-icon name="document-text-outline"></ion-icon>
             </div>
 
             <h3 class="h3">Pre-prints</h3>
           </div>
 
           <ol class="experience-list">
-
             <li class="experience-item">
               <p class="experience-text">
-                Mengyan Wang, <b>Yuxuan Hu</b>, Shiqing Wu, Weihua Li, Quan Bai, and Verica Rupar. “Balancing Information Perception with Yin-Yang: Agent-Based Information Neutrality Model for Recommendation Systems”. arXiv. 2024.
+                Xiaodan Wang, Yanbin Liu, Shiqing Wu, Ziying Zhao, <b>Yuxuan Hu</b>, Weihua Li, Quan Bai. "Ideological Isolation in Online Social Networks: A Survey of Computational Definitions, Metrics, and Mitigation Strategies". arXiv. 2026.
+              </p>
+              <div class="icon-box"><a href="https://arxiv.org/pdf/2601.07884">
+                <span class="experience-text">PDF</span></a>
+              </div>
+            </li>
+            <li class="experience-item">
+              <p class="experience-text">
+                Mengyan Wang, <b>Yuxuan Hu</b>, Shiqing Wu, Weihua Li, Quan Bai, and Verica Rupar. "Balancing Information Perception with Yin-Yang: Agent-Based Information Neutrality Model for Recommendation Systems". arXiv. 2024.
               </p>
               <div class="icon-box"><a href="https://arxiv.org/pdf/2404.04906">
                 <span class="experience-text">PDF</span></a>
@@ -540,7 +604,7 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="documents-outline"></ion-icon>
+              <ion-icon name="document-text-outline"></ion-icon>
             </div>
 
             <h3 class="h3">Oral Presentation and Poster</h3>
@@ -550,7 +614,7 @@
 			<li class="experience-item">
 			<span>July 2022</span>
 			<p class="experience-text">
-			 “AI Facilitated Isolations? The Impact of Recommendation-based Influence Diffusion in Human Society,” the 31st International Joint Conference on Artificial Intelligence (IJCAI), July 2022.
+			 "AI Facilitated Isolations? The Impact of Recommendation-based Influence Diffusion in Human Society," the 31st International Joint Conference on Artificial Intelligence (IJCAI), July 2022.
 			</p>
 			
 			</li>
